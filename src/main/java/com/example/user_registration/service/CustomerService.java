@@ -28,9 +28,7 @@ public class CustomerService {
         if (list.isEmpty()) {
             throw new ResourceNotFoundException("Customers not found");
         }
-        else{
-            return mapper.toListDTO(list);
-        }
+        return mapper.toListDTO(list);
     }
 
     public CustomerResponseDTO getCustomerById(Long customerId){
