@@ -32,12 +32,12 @@ public class OrderController {
         return ResponseEntity.ok(orderService.getOrders());
     }
 
-    @GetMapping("/{orderId}")
+    @GetMapping("order/{orderId}")
     public ResponseEntity<OrderResponseDTO> getOrderById(@PathVariable Long orderId) {
         return ResponseEntity.ok(orderService.getOrder(orderId));
     }
 
-    @GetMapping("/{customerId}")
+    @GetMapping("/customer/{customerId}")
     public ResponseEntity<List<OrderResponseDTO>> getOrdersByCustomerId(@PathVariable Long customerId) {
         return ResponseEntity.ok(orderService.getOrdersByCustomer(customerId));
     }
